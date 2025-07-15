@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOPKARO E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">SHOPIFY</div>
+</header>
+
+<!-- Top Info Bar -->
+<section class="top-info">
+    <p>Welcome to Shopify! Big discounts running now!</p>
+    <marquee behavior="scroll" direction="left">⚡ Mega Offer: 50% off on Electronics | 🥼 Flat 40% on Clothing | 🍱 25% off on Food Items | 🧹 Home Care Special Prices!</marquee>
+</section>
+
+<!-- Search & Profile Area -->
+<section class="search-section">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button id="profileBtn">👤</button>
+    <button id="cartBtn">🛒 <span id="cartCount">0</span></button>
+</section>
+
+<!-- Products Section -->
+<section id="products">
+
+    <!-- Clothing -->
+    <h2 id="clothing">Clothing</h2>
+    <select onchange="sortProducts('clothing', this.value)">
+        <option value="">Sort by Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+    <div class="product-grid" id="clothingProducts"></div>
+
+    <!-- Electronics -->
+    <h2 id="electronics">Electronics</h2>
+    <select onchange="sortProducts('electronics', this.value)">
+        <option value="">Sort by Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+    <div class="product-grid" id="electronicsProducts"></div>
+
+    <!-- Food -->
+    <h2 id="food">Food Items</h2>
+    <select onchange="sortProducts('food', this.value)">
+        <option value="">Sort by Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+    <div class="product-grid" id="foodProducts"></div>
+
+    <!-- House Care -->
+    <h2 id="house">House Care</h2>
+    <select onchange="sortProducts('house', this.value)">
+        <option value="">Sort by Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+    <div class="product-grid" id="houseProducts"></div>
+
+</section>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal hidden">
+    <h3>Shopping Cart</h3>
+    <ul id="cartItems"></ul>
+    <button onclick="closeCart()">Close Cart</button>
+</div>
+
+<!-- Profile Modal -->
+<div id="profileModal" class="modal hidden">
+    <h3>User Profile</h3>
+    <p>Name: John Doe</p>
+    <p>Email: johndoe@example.com</p>
+    <button onclick="closeProfile()">Close</button>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <h4>Online Store</h4>
+    <p>Men Clothing | Women Clothing</p>
+    <h4>Helpful Links</h4>
+    <p>
+        <a href="https://github.com/shoaibxbwf" target="_blank">Support</a> |
+        <a href="https://github.com/shoaibxbwf" target="_blank">Contact</a> |
+        <a href="https://www.instagram.com/unknown.shoaibx/?__pwa=1" target="_blank">Instagram</a>
+    </p>
+    <h4>Partners</h4>
+    <p>Zara | Levi's | UCB & More</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
